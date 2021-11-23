@@ -22,10 +22,16 @@ class MyApp extends StatelessWidget {
             fontSize: 14,
             color: Constant.secondaryTextColor,
           ),
-          headline6: TextStyle(
+          headline4: TextStyle(
             fontFamily: Constant.defaultFontFamily,
             fontWeight: FontWeight.bold,
             fontSize: 24,
+            color: Constant.primaryTextColor,
+          ),
+          headline6: TextStyle(
+            fontFamily: Constant.defaultFontFamily,
+            fontWeight: FontWeight.bold,
+            fontSize: 18,
             color: Constant.primaryTextColor,
           ),
           bodyText2: TextStyle(
