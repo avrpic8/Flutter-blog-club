@@ -1,3 +1,4 @@
+import 'package:blog_club/screens/components/posts_lis.dart';
 import 'package:flutter/material.dart';
 import 'components/story_list.dart';
 import 'components/category_list.dart';
@@ -47,6 +48,7 @@ class HomeScreen extends StatelessWidget {
                 height: 16,
               ),
               CategoryList(categories: categories),
+              const PostsList(),
             ],
           ),
         ),
