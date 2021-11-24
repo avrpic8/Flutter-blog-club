@@ -1,4 +1,4 @@
-import 'package:blog_club/screens/components/posts_lis.dart';
+import 'components/posts_list.dart';
 import 'package:flutter/material.dart';
 import 'components/story_list.dart';
 import 'components/category_list.dart';
@@ -12,10 +12,12 @@ class HomeScreen extends StatelessWidget {
     final ThemeData themeData = Theme.of(context);
     final stories = AppDatabase.stories;
     final categories = AppDatabase.categories;
+    final posts = AppDatabase.posts;
 
     return Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
+          physics: const BouncingScrollPhysics(),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -48,7 +50,10 @@ class HomeScreen extends StatelessWidget {
                 height: 16,
               ),
               CategoryList(categories: categories),
-              const PostsList(),
+              PostsList(posts: posts),
+              const SizedBox(
+                height: 32,
+              ),
             ],
           ),
         ),

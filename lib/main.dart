@@ -20,6 +20,11 @@ class MyApp extends StatelessWidget {
           subtitle1: TextStyle(
             fontFamily: Constant.defaultFontFamily,
             fontSize: 14,
+            color: Constant.primaryTextColor,
+          ),
+          subtitle2: TextStyle(
+            fontFamily: Constant.defaultFontFamily,
+            fontSize: 14,
             color: Constant.secondaryTextColor,
           ),
           headline4: TextStyle(
@@ -46,13 +51,16 @@ class MyApp extends StatelessWidget {
             color: Constant.secondaryTextColor,
           ),
         ),
-        textButtonTheme: TextButtonThemeData(style: ButtonStyle(
-          textStyle: MaterialStateProperty.all(const TextStyle(
-            fontSize: 14,
-            fontFamily: Constant.defaultFontFamily,
-            fontWeight: FontWeight.w400
-          ))
-        ))
+        textButtonTheme: TextButtonThemeData(
+          style: ButtonStyle(
+            textStyle: MaterialStateProperty.all(
+              const TextStyle(
+                  fontSize: 14,
+                  fontFamily: Constant.defaultFontFamily,
+                  fontWeight: FontWeight.w400),
+            ),
+          ),
+        ),
       ),
       home: const HomeScreen(),
     );

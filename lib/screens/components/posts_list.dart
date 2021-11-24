@@ -1,4 +1,5 @@
 import 'package:blog_club/helpers/data.dart';
+import 'package:blog_club/screens/components/post_item.dart';
 import 'package:flutter/material.dart';
 
 class PostsList extends StatelessWidget {
@@ -29,25 +30,17 @@ class PostsList extends StatelessWidget {
             ],
           ),
         ),
-        ListView.builder(itemBuilder: (context, index) {
-          final post = posts[index];
-          return Container(
-            height: 149,
-            decoration: const BoxDecoration(
-              color: Colors.white,
-              boxShadow: [
-                BoxShadow(
-                  blurRadius: 10,
-                  color: Color(0x1a5282ff),
-                )
-              ],
-            ),
-            child: Row(
-              children: [],
-            ),
-          );
-        })
+        ListView.builder(
+            physics: const ClampingScrollPhysics(),
+            itemCount: posts.length,
+            itemExtent: 141,
+            shrinkWrap: true,
+            itemBuilder: (context, index) {
+              final post = posts[index];
+              return PostItem(post: post);
+            })
       ],
     );
   }
 }
+
