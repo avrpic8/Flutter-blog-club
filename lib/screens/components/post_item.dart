@@ -63,7 +63,7 @@ class PostItem extends StatelessWidget {
                       Icon(
                         CupertinoIcons.hand_thumbsup,
                         size: 16,
-                        color: Theme.of(context).textTheme!.bodyText2!.color,
+                        color: Theme.of(context).textTheme.bodyText2!.color,
                       ),
                       const SizedBox(
                         width: 4,
@@ -78,7 +78,7 @@ class PostItem extends StatelessWidget {
                       Icon(
                         CupertinoIcons.clock,
                         size: 16,
-                        color: Theme.of(context).textTheme!.bodyText2!.color,
+                        color: Theme.of(context).textTheme.bodyText2!.color,
                       ),
                       const SizedBox(
                         width: 4,
@@ -99,7 +99,7 @@ class PostItem extends StatelessWidget {
                                 : CupertinoIcons.bookmark,
                             size: 16,
                             color:
-                                Theme.of(context).textTheme!.bodyText2!.color,
+                                Theme.of(context).textTheme.bodyText2!.color,
                           ),
                         ),
                       ),
