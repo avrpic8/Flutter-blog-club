@@ -1,3 +1,5 @@
+import 'package:blog_club/gen/assets.gen.dart';
+
 import 'components/posts_list.dart';
 import 'package:flutter/material.dart';
 import 'components/story_list.dart';
@@ -30,11 +32,7 @@ class HomeScreen extends StatelessWidget {
                       'Hi, Jonathan!',
                       style: themeData.textTheme.subtitle1,
                     ),
-                    Image.asset(
-                      'assets/img/icons/notification.png',
-                      width: 24,
-                      height: 24,
-                    ),
+                    Assets.img.icons.notification.image(width: 32, height: 32),
                   ],
                 ),
               ),
