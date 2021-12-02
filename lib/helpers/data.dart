@@ -41,6 +41,13 @@ class PostData {
       required this.imageFileName});
 }
 
+class OnBoardingItem {
+  final String title;
+  final String description;
+
+  OnBoardingItem(this.title, this.description);
+}
+
 class AppDatabase {
   static List<StoryData> get stories {
     return [
@@ -141,5 +148,14 @@ class AppDatabase {
           time: '41hr ago',
           imageFileName: 'small_post_3.jpg'),
     ];
+  }
+
+  static List<OnBoardingItem> get onBoardingItems {
+    List<OnBoardingItem> items = [];
+    for (var i = 0; i < 4; i++) {
+      items.add(OnBoardingItem('Read the article you want instantly',
+          'In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the'));
+    }
+    return items;
   }
 }

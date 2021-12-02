@@ -1,6 +1,5 @@
 import 'package:blog_club/helpers/constant.dart';
-import 'package:blog_club/screens/components/bottom_navigation.dart';
-import 'package:blog_club/screens/home_screen.dart';
+import 'package:blog_club/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -22,17 +21,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: Constant.myTheme,
-      home: Stack(
-        children: const [
-          Positioned.fill(child: HomeScreen()),
-          Positioned(
-            bottom: 0,
-            right: 0,
-            left: 0,
-            child: BottomNavigation(),
-          )
-        ],
-      ),
+      home: const SplashScreen()
     );
   }
 }

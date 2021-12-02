@@ -7,6 +7,14 @@ class Constant {
 
   static ThemeData get myTheme {
     return ThemeData(
+      colorScheme: const ColorScheme.light(
+        primary: Color(0xff376aed),
+        onPrimary: Colors.white,
+        surface: Colors.white,
+        onSurface: primaryTextColor,
+        background: Color(0xfffbfcff),
+        onBackground: primaryTextColor,
+      ),
       primarySwatch: Colors.blue,
       textTheme: const TextTheme(
         subtitle1: TextStyle(
