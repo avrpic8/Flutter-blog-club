@@ -1,5 +1,6 @@
 import 'package:blog_club/gen/assets.gen.dart';
 import 'package:blog_club/helpers/data.dart';
+import 'package:blog_club/screens/auth_screen.dart';
 import 'package:blog_club/screens/home_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -117,12 +118,12 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                             if (page == items.length - 1) {
                               Navigator.of(context).pushReplacement(
                                 MaterialPageRoute(
-                                  builder: (context) => const HomeScreen(),
+                                  builder: (context) => const AuthScreen(),
                                 ),
                               );
                             } else {
                               _pageController.animateToPage(page + 1,
-                                  duration: const Duration(microseconds: 500),
+                                  duration: const Duration(seconds: 1),
                                   curve: Curves.decelerate);
                             }
                           },
