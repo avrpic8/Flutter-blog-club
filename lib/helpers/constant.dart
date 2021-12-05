@@ -15,6 +15,13 @@ class Constant {
         background: Color(0xfffbfcff),
         onBackground: primaryTextColor,
       ),
+      appBarTheme: const AppBarTheme(
+        titleSpacing: 32,
+        backgroundColor: Colors.white,
+        foregroundColor: primaryTextColor,
+        elevation: 0
+      ),
+      snackBarTheme: const SnackBarThemeData(backgroundColor:  Color(0xff376aed)),
       primarySwatch: Colors.blue,
       textTheme: const TextTheme(
         subtitle1: TextStyle(

@@ -1,4 +1,5 @@
 import 'package:blog_club/helpers/constant.dart';
+import 'package:blog_club/screens/article_screen.dart';
 import 'package:blog_club/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -19,9 +20,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: Constant.myTheme,
-      home: const SplashScreen()
-    );
+        title: 'Flutter Demo',
+        theme: Constant.myTheme,
+        home: const ArticleScreen());
   }
 }
