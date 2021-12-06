@@ -10,26 +10,6 @@ class PostsList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Padding(
-          padding: const EdgeInsets.only(left: 32, right: 24, top: 24),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Text(
-                'Latest News',
-                style: Theme.of(context).textTheme.headline5,
-              ),
-              TextButton(
-                onPressed: () {},
-                child: const Text(
-                  'More',
-                  style: TextStyle(color: Color(0xff376aed)),
-                ),
-              )
-            ],
-          ),
-        ),
         ListView.builder(
             physics: const ClampingScrollPhysics(),
             itemCount: posts.length,

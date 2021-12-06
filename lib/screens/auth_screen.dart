@@ -79,10 +79,11 @@ class _AuthScreenState extends State<AuthScreen> {
                     Expanded(
                       child: Container(
                         decoration: BoxDecoration(
-                            borderRadius: const BorderRadius.only(
-                                topLeft: Radius.circular(32),
-                                topRight: Radius.circular(32)),
-                            color: themeData.colorScheme.surface),
+                          borderRadius: const BorderRadius.only(
+                              topLeft: Radius.circular(32),
+                              topRight: Radius.circular(32)),
+                          color: themeData.colorScheme.surface,
+                        ),
                         child: SingleChildScrollView(
                           child: Padding(
                             padding: const EdgeInsets.all(32),

@@ -48,6 +48,26 @@ class HomeScreen extends StatelessWidget {
                 height: 16,
               ),
               CategoryList(categories: categories),
+              Padding(
+                padding: const EdgeInsets.only(left: 32, right: 24, top: 24),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Text(
+                      'Latest News',
+                      style: Theme.of(context).textTheme.headline5,
+                    ),
+                    TextButton(
+                      onPressed: () {},
+                      child: const Text(
+                        'More',
+                        style: TextStyle(color: Color(0xff376aed)),
+                      ),
+                    )
+                  ],
+                ),
+              ),
               PostsList(posts: posts),
               const SizedBox(
                 height: 32,

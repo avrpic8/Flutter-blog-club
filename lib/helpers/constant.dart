@@ -58,6 +58,11 @@ class Constant {
           fontSize: 18,
           color: Constant.primaryTextColor,
         ),
+        bodyText1: TextStyle(
+          fontFamily: FontFamily.avenir,
+          fontSize: 14,
+          color: Constant.primaryTextColor,
+        ),
         bodyText2: TextStyle(
           fontFamily: FontFamily.avenir,
           fontSize: 12,

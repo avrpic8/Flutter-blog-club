@@ -1,5 +1,7 @@
 import 'package:blog_club/helpers/constant.dart';
 import 'package:blog_club/screens/article_screen.dart';
+import 'package:blog_club/screens/home_screen.dart';
+import 'package:blog_club/screens/profile_screen.dart';
 import 'package:blog_club/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -22,6 +24,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         title: 'Flutter Demo',
         theme: Constant.myTheme,
-        home: const ArticleScreen());
+        home: const ProfileScreen());
   }
 }
