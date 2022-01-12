@@ -1,7 +1,11 @@
+import 'package:blog_club/helpers/constant.dart';
 import 'package:flutter/material.dart';
 
 class BottomNavigation extends StatelessWidget {
-  const BottomNavigation({Key? key}) : super(key: key);
+  final Function(int index) onTap;
+  final selectedTab;
+  const BottomNavigation({Key? key, required this.onTap, this.selectedTab})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -26,26 +30,41 @@ class BottomNavigation extends StatelessWidget {
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: const [
+                children: [
                   _BottomNavigationItem(
-                      iconFileName: 'Home.png',
-                      activeIconFileName: 'Home.png',
-                      title: 'Home'),
+                    iconFileName: 'Home.png',
+                    activeIconFileName: 'Home.png',
+                    title: 'Home',
+                    onTap: () {
+                      onTap(Constant.homeIndex);
+                    },
+                    isActive: selectedTab == Constant.homeIndex,
+                  ),
                   _BottomNavigationItem(
                       iconFileName: 'Articles.png',
                       activeIconFileName: 'Articles.png',
-                      title: 'Articles'),
-                  SizedBox(
-                    width: 4,
-                  ),
+                      title: 'Articles',
+                      onTap: () {
+                        onTap(Constant.articleIndex);
+                      },
+                      isActive: selectedTab == Constant.articleIndex),
+                  Expanded(child: Container()),
                   _BottomNavigationItem(
                       iconFileName: 'Search.png',
                       activeIconFileName: 'Search.png',
-                      title: 'Search'),
+                      title: 'Search',
+                      onTap: () {
+                        onTap(Constant.searchIndex);
+                      },
+                      isActive: selectedTab == Constant.searchIndex),
                   _BottomNavigationItem(
                       iconFileName: 'Menu.png',
                       activeIconFileName: 'Menu.png',
-                      title: 'Menu'),
+                      title: 'Menu',
+                      onTap: () {
+                        onTap(Constant.menuIndex);
+                      },
+                      isActive: selectedTab == Constant.menuIndex),
                 ],
               ),
             ),
@@ -76,28 +95,42 @@ class _BottomNavigationItem extends StatelessWidget {
   final String iconFileName;
   final String activeIconFileName;
   final String title;
+  final Function() onTap;
+  final bool isActive;
 
   const _BottomNavigationItem(
       {Key? key,
       required this.iconFileName,
       required this.activeIconFileName,
-      required this.title})
+      required this.title,
+      required this.onTap,
+      required this.isActive})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Image.asset('assets/img/icons/$iconFileName'),
-        const SizedBox(
-          height: 4,
+    final themeData = Theme.of(context);
+    return Expanded(
+      child: InkWell(
+        onTap: onTap,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.asset('assets/img/icons/$iconFileName'),
+            const SizedBox(
+              height: 4,
+            ),
+            Text(
+              title,
+              style: themeData.textTheme.caption!.apply(
+                color: isActive
+                    ? themeData.colorScheme.primary
+                    : themeData.textTheme.caption!.color,
+              ),
+            )
+          ],
         ),
-        Text(
-          title,
-          style: Theme.of(context).textTheme.caption,
-        )
-      ],
+      ),
     );
   }
 }

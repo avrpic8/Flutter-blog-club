@@ -5,6 +5,11 @@ class Constant {
   static const primaryTextColor = Color(0xff0d253c);
   static const secondaryTextColor = Color(0xff2d4379);
 
+  static const int homeIndex = 0;
+  static const int articleIndex = 1;
+  static const int searchIndex = 2;
+  static const int menuIndex = 3;
+
   static ThemeData get myTheme {
     return ThemeData(
       colorScheme: const ColorScheme.light(
@@ -16,12 +21,12 @@ class Constant {
         onBackground: primaryTextColor,
       ),
       appBarTheme: const AppBarTheme(
-        titleSpacing: 32,
-        backgroundColor: Colors.white,
-        foregroundColor: primaryTextColor,
-        elevation: 0
-      ),
-      snackBarTheme: const SnackBarThemeData(backgroundColor:  Color(0xff376aed)),
+          titleSpacing: 32,
+          backgroundColor: Colors.white,
+          foregroundColor: primaryTextColor,
+          elevation: 0),
+      snackBarTheme:
+          const SnackBarThemeData(backgroundColor: Color(0xff376aed)),
       primarySwatch: Colors.blue,
       textTheme: const TextTheme(
         subtitle1: TextStyle(

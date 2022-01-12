@@ -26,6 +26,7 @@ class ProfileScreen extends StatelessWidget {
         ],
       ),
       body: SingleChildScrollView(
+        physics: const BouncingScrollPhysics(),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -42,7 +43,8 @@ class ProfileScreen extends StatelessWidget {
                     boxShadow: [
                       BoxShadow(
                         blurRadius: 20,
-                        color: themData.colorScheme.onBackground.withOpacity(0.1),
+                        color:
+                            themData.colorScheme.onBackground.withOpacity(0.1),
                       ),
                     ],
                   ),
@@ -71,7 +73,8 @@ class ProfileScreen extends StatelessWidget {
                                   ),
                                   Text(
                                     'Jovi Daniel',
-                                    style: themData.textTheme.bodyText1?.copyWith(
+                                    style:
+                                        themData.textTheme.bodyText1?.copyWith(
                                       fontWeight: FontWeight.w700,
                                       fontSize: 15,
                                     ),
@@ -121,7 +124,8 @@ class ProfileScreen extends StatelessWidget {
                     decoration: BoxDecoration(boxShadow: [
                       BoxShadow(
                         blurRadius: 20,
-                        color: themData.colorScheme.onBackground.withOpacity(0.8),
+                        color:
+                            themData.colorScheme.onBackground.withOpacity(0.8),
                       ),
                     ]),
                   ),
@@ -238,9 +242,11 @@ class ProfileScreen extends StatelessWidget {
                           style: themData.textTheme.headline5,
                         )),
                         IconButton(
-                            onPressed: () {}, icon: Assets.img.icons.grid.svg()),
+                            onPressed: () {},
+                            icon: Assets.img.icons.grid.svg()),
                         IconButton(
-                            onPressed: () {}, icon: Assets.img.icons.table.svg()),
+                            onPressed: () {},
+                            icon: Assets.img.icons.table.svg()),
                       ],
                     ),
                   ),
